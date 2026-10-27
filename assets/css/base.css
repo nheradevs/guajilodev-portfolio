@@ -88,8 +88,8 @@
   }
 
   ::selection {
-    background: var(--accent);
-    color: var(--accent-ink);
+    background: var(--surface-2);
+    color: var(--ink);
   }
 
   code,

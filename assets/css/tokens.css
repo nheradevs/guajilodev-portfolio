@@ -58,19 +58,19 @@
   :root {
     color-scheme: dark;
 
-    /* Contrastes medidos sobre --bg salvo donde se indica */
-    --bg: #1F2B23;
-    --bg-sunken: #18211B;
-    --surface: #3B4A40;
-    --surface-2: #46564B;
-    --ink: #E6DDCE;          /* 10.9:1 */
-    --ink-2: #C0BBAA;        /* 7.7:1, 4.9:1 sobre --surface */
-    --ink-3: #96A099;        /* 5.5:1, solo sobre --bg y --bg-sunken */
-    --line: #4C5D51;
-    --line-strong: #6B756D;  /* 3.1:1, bordes de control */
-    --accent: #E5A96B;       /* 7.2:1 */
-    --accent-ink: #1F2B23;
-    --link: #B7D3BC;         /* 9.1:1 */
+    /* Contrastes medidos sobre --bg y sobre --surface-2 */
+    --bg: #01082D;
+    --bg-sunken: #01061F;
+    --surface: #041D56;
+    --surface-2: #0F2573;
+    --ink: #ADE1FB;          /* 13.9:1 */
+    --ink-2: #7CC4EE;        /* 10.2:1, 7.2:1 sobre --surface-2 */
+    --ink-3: #5AA7D6;        /* 7.4:1, 5.2:1 sobre --surface-2 */
+    --line: #123064;
+    --line-strong: #266CA9;  /* 3.5:1, bordes de control y foco */
+    --accent: #266CA9;       /* 3.5:1: solo gráficos, bordes y foco, nunca texto sobre el */
+    --accent-ink: #ADE1FB;   /* texto sobre --surface-2, 9.8:1 */
+    --link: #7CC4EE;         /* 10.2:1 */
     --paper: #FFFFFF;        /* solo print.css */
     --paper-ink: #000000;    /* solo print.css */
 
@@ -85,7 +85,7 @@
     --fs-lg: 1.5rem;
     --fs-xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
     --fs-2xl: clamp(2.25rem, 1.6rem + 3.2vw, 3.75rem);
-    --fs-3xl: clamp(2.5rem, 1.2rem + 5vw, 4.75rem);
+    --fs-3xl: clamp(2.25rem, 1rem + 4.2vw, 4rem);
     --fs-mono: 0.78125rem;
 
     --lh-body: 1.6;
