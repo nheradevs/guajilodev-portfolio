@@ -16,3 +16,7 @@ Al publicar un artículo: copiar `blog/_template.html`, crear su pareja en `en/b
 - Los artículos del blog están en preparación: tienen la introducción y el aviso visible, pero les falta el cuerpo. Cuando se escriban, actualizar `dateModified` y la fecha del feed.
 - Las figuras están reservadas con su `data-alt`; cuando exista el archivo, agregar el `<img>` con `width`, `height` y `alt`.
 - Los casos no publican métrica todavía: cuando exista, se agrega el bloque «Qué cambió» con el número.
+
+## Tarjetas sociales
+
+`python3 tools/make-og.py` regenera las 30 imágenes de `assets/img/og/` a partir del `og:title` de cada página, con la tipografía del sitio. Necesita `fonttools`, `brotli` y `Pillow`. No se ejecuta en el despliegue: es una herramienta local.
