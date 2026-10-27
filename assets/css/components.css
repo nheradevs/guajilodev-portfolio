@@ -109,9 +109,9 @@
     border: var(--border-strong);
     border-radius: var(--radius);
     color: var(--ink);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
     cursor: pointer;
   }
 
@@ -194,9 +194,9 @@
     min-width: var(--tap);
     min-height: var(--tap);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
     text-decoration: none;
   }
 
@@ -244,7 +244,7 @@
 
   .c-hero__place {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
   }
 
@@ -270,7 +270,7 @@
     margin-top: var(--s-8);
     padding-top: var(--s-4);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
     line-height: 1.9;
   }
@@ -298,7 +298,7 @@
 
   .c-facts dt {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
   }
 
@@ -382,9 +382,10 @@
   .c-list__num {
     padding-top: 0.3em;
     color: var(--accent);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
   }
 
   .c-list__title {
@@ -406,14 +407,14 @@
     max-width: 52ch;
     margin-top: var(--s-3);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
     line-height: var(--lh-ui);
   }
 
   .c-list__note-key {
     color: var(--ink-2);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-list--steps .c-list__title {
@@ -453,10 +454,11 @@
 
   .c-case__meta {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
     margin-top: var(--s-3);
+    font-variant-numeric: tabular-nums;
   }
 
   .c-case__title {
@@ -482,9 +484,9 @@
 
   .c-case__facts dt {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-case__facts dd {
@@ -496,7 +498,7 @@
   .c-case__stack {
     padding-top: var(--s-3);
     color: var(--ink-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
   }
 
@@ -527,7 +529,7 @@
     border: 1px dashed var(--line-strong);
     border-radius: var(--radius);
     color: var(--ink-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
     line-height: 1.8;
   }
@@ -589,9 +591,10 @@
     flex-wrap: wrap;
     gap: var(--s-1) var(--s-3);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
   }
 
   .c-post__title {
@@ -705,7 +708,7 @@
     margin-top: var(--s-8);
     padding-top: var(--s-4);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
   }
 
@@ -737,7 +740,7 @@
     place-items: center;
     padding: var(--s-4);
     color: var(--ink-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
     text-align: center;
   }
@@ -745,7 +748,7 @@
   .c-figure figcaption {
     margin-top: var(--s-3);
     color: var(--ink-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
     line-height: var(--lh-ui);
   }
@@ -763,9 +766,9 @@
 
   .c-callout__label {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   /* Bloque de código con botón de copiar */
@@ -792,9 +795,9 @@
     border: var(--border-strong);
     border-radius: var(--radius);
     color: var(--ink-2);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
     cursor: pointer;
   }
 
@@ -876,9 +879,9 @@
     gap: 0 var(--s-2);
     margin: 0;
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-crumbs__list li {
@@ -918,9 +921,10 @@
 
   .c-rows dt {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
   }
 
   .c-rows dd {
@@ -1018,7 +1022,7 @@
 
   .c-prose--serif {
     max-width: var(--measure-article);
-    font-family: var(--font-serif);
+    font-family: var(--font-body);
     font-size: 1.1875rem;
   }
 
@@ -1056,8 +1060,9 @@
     gap: var(--s-1) var(--s-4);
     margin-top: var(--s-6);
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
+    font-variant-numeric: tabular-nums;
   }
 
   .c-article__title {
@@ -1101,9 +1106,9 @@
 
   .c-toc__title {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-toc__list {
@@ -1151,9 +1156,9 @@
 
   .c-next__label {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-body);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-next__link {
@@ -1183,9 +1188,9 @@
 
   .c-notfound__code {
     color: var(--ink-3);
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     font-size: var(--fs-mono);
-    letter-spacing: var(--tracking-mono);
+    letter-spacing: 0;
   }
 
   .c-notfound__title {

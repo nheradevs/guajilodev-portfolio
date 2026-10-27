@@ -47,10 +47,10 @@ def wrap(draw, text, font, max_width):
 
 def main():
     tmp = tempfile.mkdtemp()
-    display = os.path.join(tmp, "archivo.ttf")
-    mono = os.path.join(tmp, "mono.ttf")
-    to_ttf("assets/fonts/archivo-latin-wght.woff2", display, 600)
-    to_ttf("assets/fonts/jetbrains-mono-latin-400.woff2", mono)
+    display = os.path.join(tmp, "montserrat.ttf")
+    body = os.path.join(tmp, "lato.ttf")
+    to_ttf("assets/fonts/montserrat-latin-wght.woff2", display, 600)
+    to_ttf("assets/fonts/lato-latin-400.woff2", body)
 
     count = 0
     for page in glob.glob("**/*.html", recursive=True):
@@ -86,7 +86,7 @@ def main():
             draw.text((MARGIN, y), line, font=font, fill=INK)
             y += line_height
         draw.rectangle([MARGIN, H - 84, MARGIN + 10, H - 74], fill=ACCENT)
-        draw.text((MARGIN + 26, H - 90), "guajilodev", font=ImageFont.truetype(mono, 26), fill=MUTED)
+        draw.text((MARGIN + 26, H - 90), "guajilodev", font=ImageFont.truetype(body, 26), fill=MUTED)
         card.save(path, optimize=True)
         count += 1
     print(f"{count} tarjetas regeneradas")
