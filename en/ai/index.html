@@ -1,0 +1,211 @@
+<!-- pair: /ia/ <-> /en/ai/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <title>AI integration and code auditing · José Tovar</title>
+  <meta name="description" content="When to use a model and when not to, access limits for agents, and auditing model-generated code before it reaches production in a real business system">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <link rel="canonical" href="https://guajilodev.netlify.app/en/ai/">
+  <link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/ia/">
+  <link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/ai/">
+  <link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/ia/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="guajilodev">
+  <meta property="og:title" content="AI integration and code auditing">
+  <meta property="og:description" content="When to use a model and when not to, access limits for agents, and auditing model-generated code before it reaches production in a real business system">
+  <meta property="og:url" content="https://guajilodev.netlify.app/en/ai/">
+  <meta property="og:image" content="https://guajilodev.netlify.app/assets/img/og/og-en-ai-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="guajilodev card titled “Applied AI, with limits and review”">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://guajilodev.netlify.app/en/"},{"@type":"ListItem","position":2,"name":"Applied AI, with limits and review","item":"https://guajilodev.netlify.app/en/ai/"}]}</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, writing" href="/en/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Skip to content</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/en/" aria-label="guajilodev, home">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menu
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Main">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/en/case-studies/">Work</a></li>
+              <li><a class="c-nav__link" href="/en/ai/" aria-current="page">AI</a></li>
+              <li><a class="c-nav__link" href="/en/blog/">Blog</a></li>
+              <li><a class="c-nav__link" href="/en/about/">About</a></li>
+              <li><a class="c-nav__link" href="/en/contact/">Contact</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Language">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/ia/" hreflang="es" lang="es" aria-label="Español" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/ai/" hreflang="en" lang="en" aria-label="English" aria-current="true" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <header class="c-page-head l-container" data-hero>
+        <p class="c-page-head__label">Applied AI</p>
+        <h1 class="c-page-head__title">Applied AI, with limits and review</h1>
+        <p class="c-page-head__lead">I integrate models, agents, and MCP servers into systems already in production. Every integration has a written limit, and every generated line is reviewed before the deploy.</p>
+    </header>
+    <div class="l-container l-grid c-page-body">
+      <nav class="l-span-3 c-toc c-toc--page" aria-labelledby="toc-ai">
+        <p class="c-toc__title" id="toc-ai">On this page</p>
+        <ol class="c-toc__list" role="list">
+          <li><a href="#when">When I use a model</a></li>
+          <li><a href="#when-not">When I don’t</a></li>
+          <li><a href="#agents">Agents with scoped permissions</a></li>
+          <li><a href="#mcp">MCP servers</a></li>
+          <li><a href="#data">Data that stays in</a></li>
+          <li><a href="#audit">How I audit generated code</a></li>
+          <li><a href="#example">A review example</a></li>
+          <li><a href="#cases-ai">Cases and writing</a></li>
+        </ol>
+      </nav>
+      <div class="l-from-5 c-prose">
+        <!-- TODO: the AI providers, models, and frameworks actually in use. Not named until confirmed -->
+        <h2 id="when">When I use a model</h2>
+        <p>I use a model when the task repeats, has a clear input, and someone can review the output. Classifying free text, extracting data from documents, or preparing a first draft are good candidates.</p>
+        <p>If the task happens once a month, a script or a person handles it better and for less.</p>
+
+        <h2 id="when-not">When I don’t</h2>
+        <ul>
+          <li>A slow query caused by a missing index. That gets measured and fixed in the database.</li>
+          <li>A badly designed data model. AI inherits the mess and repeats it faster.</li>
+          <li>A process nobody defined. Automating it only produces confusion with a better response time.</li>
+        </ul>
+        <p>When the answer is code and not AI, I say so. More on that in <a href="/en/blog/when-not-to-use-ai/">when not to use AI</a>.</p>
+
+        <h2 id="agents">Agents with scoped permissions</h2>
+        <p>An agent gets the tools the task needs and nothing more. Each tool has a defined scope: what it can read, what it can write, and what gets logged.</p>
+        <p>Actions that change data or leave the system ask a person for confirmation. An agent without limits is an incident waiting its turn.</p>
+        <figure class="c-figure c-figure--16x9">
+          <!-- alt previsto: Flow between the agent, its tools, and the access limit on each one -->
+          <div class="c-figure__slot" data-alt="System architecture diagram">Diagram pending</div>
+          <figcaption>What each of the agent’s tools can read, what it can write, and what gets logged.</figcaption>
+        </figure>
+
+        <h2 id="mcp">MCP servers</h2>
+        <p>MCP (Model Context Protocol) is an open protocol for connecting a model to in-house tools and data. I use it to expose only what the task needs, with separate credentials and no write access when the task only reads.</p>
+        <p>What the agent can’t read, it can’t leak.</p>
+
+        <h2 id="data">Data that stays in</h2>
+        <ul>
+          <li>Credentials, keys, and secrets of any kind.</li>
+          <li>Customer personal data, unless there’s an explicit agreement.</li>
+          <li>Code or data the contract marks as confidential.</li>
+        </ul>
+        <p>Before connecting an external provider’s model, I check what gets sent, what the provider keeps, and for how long.</p>
+
+        <h2 id="audit">How I audit generated code</h2>
+        <p>I read what the model writes before it ships. Fast isn’t the same as correct.</p>
+        <ol>
+          <li><strong>Input validation.</strong> What happens with an empty, huge, or malicious value.</li>
+          <li><strong>Contracts.</strong> Whether the function returns what the rest of the system expects.</li>
+          <li><strong>Error handling.</strong> Whether the error is logged, propagated, or swallowed.</li>
+          <li><strong>Dependencies.</strong> Whether a new library showed up, and who maintains it.</li>
+          <li><strong>Secrets.</strong> Whether a key, a token, or an internal URL ended up in the code.</li>
+          <li><strong>Tests.</strong> Whether a test fails when the change is wrong.</li>
+        </ol>
+        <p>The full list, with examples, is in <a href="/en/blog/auditing-ai-generated-code/">how I audit the code a model writes</a>.</p>
+
+        <h2 id="example">A review example</h2>
+        <p>An illustrative example, written for this page. It doesn’t come from a client.</p>
+        <div class="c-code" data-copy>
+          <pre tabindex="0"><code><span class="tok-com"># What the model proposed</span>
+<span class="tok-kw">def</span> find_sales(request):
+    customer = request.args[<span class="tok-str">"customer"</span>]
+    sql = <span class="tok-str">f"SELECT * FROM sales WHERE customer = '{customer}'"</span>
+    rows = db.execute(sql).fetchall()
+    <span class="tok-kw">return</span> {<span class="tok-str">"rows"</span>: rows}</code></pre>
+        </div>
+        <p>It compiles and returns data. The review turns up five problems:</p>
+        <ol>
+          <li>It builds the SQL from the value the user sends. That’s SQL injection.</li>
+          <li>If the parameter is missing, the raw exception reaches the user.</li>
+          <li><code>SELECT *</code> returns columns the screen doesn’t use and maybe shouldn’t see.</li>
+          <li>There’s no row limit. A customer with years of history pulls the whole table.</li>
+          <li>No test covers any of these cases.</li>
+        </ol>
+        <div class="c-code" data-copy>
+          <pre tabindex="0"><code><span class="tok-com"># What shipped after review</span>
+<span class="tok-kw">def</span> find_sales(request):
+    customer = request.args.get(<span class="tok-str">"customer"</span>, <span class="tok-str">""</span>).strip()
+    <span class="tok-kw">if not</span> customer <span class="tok-kw">or</span> len(customer) &gt; 64:
+        <span class="tok-kw">return</span> {<span class="tok-str">"error"</span>: <span class="tok-str">"invalid customer"</span>}, 400
+
+    sql = (
+        <span class="tok-str">"SELECT id, date, total FROM sales "</span>
+        <span class="tok-str">"WHERE customer = %s ORDER BY date DESC LIMIT 100"</span>
+    )
+    rows = db.execute(sql, (customer,)).fetchall()
+    <span class="tok-kw">return</span> {<span class="tok-str">"rows"</span>: rows}</code></pre>
+        </div>
+        <aside class="c-callout c-callout--warning" aria-label="Warning">
+          <p class="c-callout__label">Warning</p>
+          <p>The fixed version still needs its tests. Review finds the problem; a test keeps it from coming back.</p>
+        </aside>
+
+        <h2 id="cases-ai">Cases and writing</h2>
+        <p>The applied AI case isn’t published yet. I won’t fill it with a made-up example. In the meantime, the <a href="/en/case-studies/">production system case studies</a> show how I work on code that already exists.</p>
+        <ul>
+          <li><a href="/en/blog/when-not-to-use-ai/">When not to use AI</a></li>
+          <li><a href="/en/blog/auditing-ai-generated-code/">How I audit the code a model writes</a></li>
+          <li><a href="/en/blog/owasp-top-10-static-site/">How I applied the OWASP Top 10 to this site</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Footer">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (external site)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (external site)</span></a></li>
+          <li><a href="/en/feed.xml">RSS</a></li>
+          <li><a href="/en/colophon/">Colophon</a></li>
+        </ul>
+      </nav>
+      <p class="c-footer__note l-span-12">Static site. No frameworks, no cookies, no trackers. · © 2026 José Tovar</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guajilodev, writing by José Tovar</title>
+    <link>https://guajilodev.netlify.app/en/</link>
+    <description>Production systems, security, and applied AI. Written by hand, with examples</description>
+    <language>en</language>
+    <atom:link href="https://guajilodev.netlify.app/en/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 26 Oct 2026 09:00:00 -0500</lastBuildDate>
+    <item>
+      <title>How I applied the OWASP Top 10 to this site</title>
+      <link>https://guajilodev.netlify.app/en/blog/owasp-top-10-static-site/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/en/blog/owasp-top-10-static-site/</guid>
+      <description>CSP, self-hosted fonts, zero dependencies, and what a static site can’t protect.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>When not to use AI</title>
+      <link>https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/</guid>
+      <description>Why a missing index isn’t fixed with a prompt, and what to ask before integrating a model.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>How I audit the code a model writes</title>
+      <link>https://guajilodev.netlify.app/en/blog/auditing-ai-generated-code/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/en/blog/auditing-ai-generated-code/</guid>
+      <description>The short list I use before approving a change a model wrote.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,149 @@
+<!--
+  Plantilla de artículo. Para publicar uno nuevo:
+  1. Copia este archivo a /blog/<slug>/index.html (slug en kebab-case, sin acentos, máximo cinco palabras).
+  2. Crea la pareja en /en/blog/<slug-en>/index.html y actualiza la línea "pair" de las dos.
+  3. Reemplaza cada TODO de abajo y borra la meta robots.
+  4. Agrega el artículo a /blog/, al feed.xml y al sitemap.xml, con su fecha real.
+  Este archivo no se enlaza desde ninguna página y no entra en el sitemap.
+-->
+<!-- pair: /blog/TODO-slug/ <-> /en/blog/TODO-slug-en/ -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <!-- TODO: título, clave al principio, máximo 60 caracteres con la marca -->
+  <title>TODO: título · José Tovar</title>
+  <meta name="description" content="TODO: descripción única de 140 a 160 caracteres, sin punto final">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <!-- Al publicar: canonical y hreflang (es, en, x-default) con URL absoluta, como en cualquier artículo -->
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, artículos" href="/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/" aria-label="guajilodev, inicio">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menú
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Principal">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/casos/">Casos</a></li>
+              <li><a class="c-nav__link" href="/ia/">IA</a></li>
+              <li><a class="c-nav__link" href="/blog/" aria-current="true">Blog</a></li>
+              <li><a class="c-nav__link" href="/sobre-mi/">Sobre mí</a></li>
+              <li><a class="c-nav__link" href="/contacto/">Contacto</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Idioma">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/blog/TODO-slug/" hreflang="es" lang="es" aria-label="Español" aria-current="true" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/blog/TODO-slug-en/" hreflang="en" lang="en" aria-label="English" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <article class="l-container" aria-labelledby="titulo">
+      <header class="c-article__head" data-hero>
+        <nav class="c-crumbs" aria-label="Migas de pan"><ol class="c-crumbs__list" role="list"><li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li><li><span aria-current="page">TODO: título corto</span></li></ol></nav>
+        <p class="c-article__meta"><span>TODO: tema</span><!-- TODO: fecha real, formato <time datetime="2026-11-03">nov 2026</time> --><span class="c-todo">TODO: fecha</span><span class="c-todo">TODO: tiempo de lectura</span><span>José Tovar</span></p>
+        <h1 class="c-article__title" id="titulo">TODO: título definitivo, distinto del &lt;title&gt;</h1>
+      </header>
+      <figure class="c-figure c-figure--16x9 c-article__cover">
+          <!-- Cabecera: <img> sin loading="lazy" y con fetchpriority="high" -->
+          <div class="c-figure__slot" data-alt="Imagen de cabecera del artículo">Imagen pendiente</div>
+        </figure>
+      <div class="c-article">
+        <nav class="c-article__toc c-toc" aria-labelledby="toc">
+          <p class="c-toc__title" id="toc">En este artículo</p>
+          <ol class="c-toc__list" role="list">
+          <!-- Un enlace por cada h2 del cuerpo, mismo texto y mismo id -->
+          <li><a href="#seccion-1">TODO: sección 1</a></li>
+          <li><a href="#seccion-2">TODO: sección 2</a></li>
+          </ol>
+        </nav>
+        <div class="c-article__body c-prose c-prose--serif">
+          <!-- Introducción: dos o tres párrafos cortos. Una idea por párrafo -->
+          <p><span class="c-todo">TODO: introducción</span></p>
+          <h2 id="seccion-1">TODO: sección 1</h2>
+          <p><span class="c-todo">TODO: contenido</span></p>
+          <!-- Bloque de código: el botón de copiar lo agrega main.js. Resaltado a mano con tok-kw, tok-str y tok-com -->
+          <div class="c-code" data-copy>
+            <pre tabindex="0"><code><span class="tok-com"># TODO: código</span></code></pre>
+          </div>
+          <h2 id="seccion-2">TODO: sección 2</h2>
+          <!-- Callout: c-callout para nota, c-callout c-callout--warning para advertencia -->
+          <aside class="c-callout" aria-label="Nota">
+            <p class="c-callout__label">Nota</p>
+            <p>TODO: nota</p>
+          </aside>
+          <!-- Figura: reemplaza el div por <img src width height alt loading="lazy" decoding="async"> cuando exista el archivo -->
+          <figure class="c-figure c-figure--16x9">
+            <div class="c-figure__slot" data-alt="Imagen de cabecera del artículo">Diagrama pendiente</div>
+            <figcaption>TODO: contexto o fuente, sin repetir el alt</figcaption>
+          </figure>
+          <h2 id="relacionado">Relacionado</h2>
+          <!-- Dos o tres enlaces internos con texto descriptivo -->
+          <ul><li><a href="/ia/">IA aplicada, con límites y revisión</a></li><li><a href="/casos/">Casos de sistemas en producción</a></li></ul>
+        </div>
+        <footer class="c-article__foot">
+          <section class="c-author" aria-label="Autor">
+            <p class="c-author__name">José Tovar</p>
+            <p class="c-author__text">Desarrollador senior y líder técnico. Arreglo y modernizo sistemas en producción desde 2011, ahora también con IA y con revisión del código que genera. <a href="/sobre-mi/">Más sobre mí</a>.</p>
+          </section>
+          <nav class="c-next" aria-label="Siguiente artículo">
+            <p class="c-next__label">Siguiente artículo</p>
+            <a class="c-next__link" href="/blog/TODO-slug/">TODO: título del siguiente artículo</a>
+          </nav>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Pie de página">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Correo</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/colofon/">Colofón</a></li>
+        </ul>
+      </nav>
+      <!-- TODO: licencia del contenido -->
+      <p class="c-footer__note l-span-12">Sitio estático, sin frameworks, sin cookies y sin trackers</p>
+    </div>
+  </footer>
+</body>
+</html>

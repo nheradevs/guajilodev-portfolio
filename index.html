@@ -1,0 +1,419 @@
+<!-- pair: / <-> /en/ -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <title>Desarrollador senior full stack con IA · José Tovar</title>
+  <meta name="description" content="Arreglo y modernizo sistemas que ya están en producción y meto IA con criterio. Reviso el código que generan los modelos antes de que llegue a tus usuarios">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <link rel="canonical" href="https://guajilodev.netlify.app/">
+  <link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/">
+  <link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="guajilodev">
+  <meta property="og:title" content="Desarrollador senior full stack con IA">
+  <meta property="og:description" content="Arreglo y modernizo sistemas que ya están en producción y meto IA con criterio. Reviso el código que generan los modelos antes de que llegue a tus usuarios">
+  <meta property="og:url" content="https://guajilodev.netlify.app/">
+  <meta property="og:image" content="https://guajilodev.netlify.app/assets/img/og/og-inicio-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarjeta de guajilodev con el título «Meto IA en sistemas que ya están en producción. Y audito lo que escribe.»">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://guajilodev.netlify.app/#persona","name":"José Tovar","alternateName":"guajilodev","jobTitle":"Desarrollador senior y líder técnico","url":"https://guajilodev.netlify.app/","knowsLanguage":["es","en"],"address":{"@type":"PostalAddress","addressLocality":"Bogotá","addressCountry":"CO"},"sameAs":["https://www.linkedin.com/in/jose-luis-tovar-fernandez/","https://github.com/Guajilodev"]},{"@type":"WebSite","@id":"https://guajilodev.netlify.app/#sitio","name":"guajilodev","url":"https://guajilodev.netlify.app/","inLanguage":"es","publisher":{"@id":"https://guajilodev.netlify.app/#persona"}}]}</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, artículos" href="/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/" aria-label="guajilodev, inicio">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menú
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Principal">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/casos/">Casos</a></li>
+              <li><a class="c-nav__link" href="/ia/">IA</a></li>
+              <li><a class="c-nav__link" href="/blog/">Blog</a></li>
+              <li><a class="c-nav__link" href="/sobre-mi/">Sobre mí</a></li>
+              <li><a class="c-nav__link" href="/contacto/">Contacto</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Idioma">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/" hreflang="es" lang="es" aria-label="Español" aria-current="true" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/" hreflang="en" lang="en" aria-label="English" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <section class="c-hero" aria-labelledby="hero-titulo" data-hero>
+      <div class="l-container l-grid">
+        <div class="l-span-7">
+          <p class="c-hero__place">Bogotá, Colombia · remoto · UTC-5</p>
+          <h1 class="c-hero__title" id="hero-titulo">Meto IA en sistemas que ya están en producción. <span class="c-hero__em">Y audito lo que escribe.</span></h1>
+          <p class="c-hero__lead">Desde 2011 arreglo y modernizo sistemas que sostienen negocios. Ahora también con modelos, agentes y servidores <abbr title="Model Context Protocol">MCP</abbr> adentro, y con revisión del código que generan antes de que llegue a producción.</p>
+          <p class="c-hero__stack"><span class="u-visually-hidden">Herramientas principales: </span>Java · Spring Boot · .NET · Node · Python · PostgreSQL · APIs REST · modelos · agentes · MCP</p>
+          <div class="c-hero__actions">
+            <a class="c-btn c-btn--solid" href="/casos/">Ver los casos</a>
+            <a class="c-btn c-btn--text" href="#contacto">Escríbeme</a>
+          </div>
+        </div>
+        <div class="l-from-10 c-hero__aside">
+          <dl class="c-facts">
+            <div class="c-facts__item">
+              <dt>Desde</dt>
+              <dd>2011, sin interrupciones</dd>
+            </div>
+            <div class="c-facts__item">
+              <dt>Líder técnico</dt>
+              <dd>Desde 2017</dd>
+            </div>
+            <div class="c-facts__item">
+              <dt>Países</dt>
+              <dd>Venezuela, Chile, Argentina, Ecuador, México y España</dd>
+            </div>
+            <div class="c-facts__item">
+              <dt>Idiomas</dt>
+              <dd>Español nativo, inglés B1</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="que-ataco" aria-labelledby="s01">
+      <div class="l-container">
+        <h2 class="c-label" id="s01"><span class="c-label__num">01</span> · Qué ataco</h2>
+        <ol class="c-list c-list--split" role="list">
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">01</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Legacy que da miedo tocar</h3>
+              <p class="c-list__text">Aplicaciones Java 8 y JSP, .NET viejo, módulos que entiende una sola persona. Leo, documento y recién después muevo algo.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">02</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">IA metida sin revisar</h3>
+              <p class="c-list__text">Copilotos generando código que nadie lee, prompts con datos de clientes, agentes con más permisos de los que necesitan. Reviso qué entra, qué sale y qué queda registrado.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">03</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Consultas que se caen con el histórico</h3>
+              <p class="c-list__text">Reportes que tardan minutos sobre tablas enormes. Mido, separo, indexo y vuelvo a medir.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">04</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Deploys del viernes por la noche</h3>
+              <p class="c-list__text">Sin CI/CD, sin rollback, sin entorno de pruebas. Armo el camino para que un deploy deje de ser un evento.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">05</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Sistemas que no se hablan entre sí</h3>
+              <p class="c-list__text">APIs de terceros, el mismo dato en tres bases, integraciones a mano. Defino el contrato y lo dejo escrito.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">06</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Equipos sin criterio común</h3>
+              <p class="c-list__text">Cada uno despliega distinto y nadie revisa código. Pongo revisión, ramas y reglas que el equipo puede sostener.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="ia-aplicada" aria-labelledby="s02">
+      <div class="l-container">
+        <h2 class="c-label" id="s02"><span class="c-label__num">02</span> · IA aplicada</h2>
+        <ol class="c-list c-list--notes" role="list">
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">01</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Modelos dentro del flujo de trabajo</h3>
+              <p class="c-list__text">Integro modelos de distintos proveedores por API en herramientas internas que el equipo abre todos los días.</p>
+            </div>
+            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> si la tarea no se repite, no justifica un modelo.</p>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">02</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Agentes con herramientas acotadas</h3>
+              <p class="c-list__text">Permisos claros, alcance definido y registro de lo que hacen.</p>
+            </div>
+            <p class="c-list__note"><span class="c-list__note-key">Riesgo:</span> un agente sin límites es un incidente esperando su turno.</p>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">03</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Servidores MCP</h3>
+              <p class="c-list__text">Conecto modelos con herramientas y datos propios usando MCP (Model Context Protocol), con el acceso mínimo que la tarea necesita.</p>
+            </div>
+            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> lo que el agente no puede leer, no puede filtrar.</p>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">04</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Auditoría del código generado</h3>
+              <p class="c-list__text">Leo lo que el modelo escribe antes de que llegue a producción: validación de entrada, contratos, manejo de errores, dependencias y pruebas.</p>
+            </div>
+            <p class="c-list__note"><span class="c-list__note-key">Riesgo:</span> rápido no es lo mismo que correcto.</p>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">05</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Criterio para no usarla</h3>
+              <p class="c-list__text">Un modelo no arregla un índice faltante, un modelo de datos mal pensado ni un proceso que nadie definió.</p>
+            </div>
+            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> cuando la respuesta es código y no IA, lo digo.</p>
+          </li>
+        </ol>
+        <p class="c-section-link"><a class="c-btn c-btn--text" href="/ia/">Leer los criterios</a></p>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="como-trabajo" aria-labelledby="s03">
+      <div class="l-container l-grid">
+        <h2 class="c-label l-span-12" id="s03"><span class="c-label__num">03</span> · Cómo trabajo</h2>
+        <ol class="c-list c-list--steps l-from-4" role="list">
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">01</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Primero el negocio</h3>
+              <p class="c-list__text">No toco una línea sin saber qué hace el sistema y quién lo usa.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">02</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Cambios chicos y verificables</h3>
+              <p class="c-list__text">Una cosa por vez, con pruebas donde se puede. Si el código salió de un modelo, alguien lo leyó antes de entrar.</p>
+            </div>
+          </li>
+          <li class="c-list__item">
+            <span class="c-list__num" aria-hidden="true">03</span>
+            <div class="c-list__body">
+              <h3 class="c-list__title">Mejor de lo que lo encontré</h3>
+              <p class="c-list__text">Código documentado, decisiones anotadas y alguien del equipo que entiende lo que hice.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="casos" aria-labelledby="s04">
+      <div class="l-container">
+        <h2 class="c-label" id="s04"><span class="c-label__num">04</span> · Casos</h2>
+        <div class="c-cases">
+          <article class="c-case" aria-labelledby="caso-1">
+            <p class="c-case__meta">Chile · <time datetime="2022">2022</time> – <time datetime="2023">2023</time></p>
+            <h3 class="c-case__title" id="caso-1"><a href="/casos/canal-b2b-telecomunicaciones/">Canal B2B de telecomunicaciones</a></h3>
+            <dl class="c-case__facts">
+              <div>
+                <dt>Contexto</dt>
+                <dd>Aplicaciones legacy del canal B2B sosteniendo procesos críticos de venta y facturación.</dd>
+              </div>
+              <div>
+                <dt>Qué hice</dt>
+                <dd>Optimicé componentes en Java 8 y JSP, integré APIs externas y acompañé el desarrollo de aplicaciones nuevas.</dd>
+              </div>
+            </dl>
+            <p class="c-case__stack"><span class="u-visually-hidden">Stack: </span>Java 8 · JSP · APIs REST</p>
+          </article>
+
+          <article class="c-case" aria-labelledby="caso-2">
+            <p class="c-case__meta">Argentina · <time datetime="2022">2022</time></p>
+            <h3 class="c-case__title" id="caso-2"><a href="/casos/compras-licitaciones-subastas/">Compras, licitaciones y subastas</a></h3>
+            <dl class="c-case__facts">
+              <div>
+                <dt>Contexto</dt>
+                <dd>Plataforma transaccional con procesos de compra, licitación y gestión de usuarios.</dd>
+              </div>
+              <div>
+                <dt>Qué hice</dt>
+                <dd>Servicios backend en Spring Boot, componentes de frontend y comunicación entre módulos con APIs REST sobre PostgreSQL.</dd>
+              </div>
+            </dl>
+            <p class="c-case__stack"><span class="u-visually-hidden">Stack: </span>Spring Boot · React · PostgreSQL</p>
+          </article>
+
+          <article class="c-case" aria-labelledby="caso-3">
+            <p class="c-case__meta"><time datetime="2018">2018</time></p>
+            <h3 class="c-case__title" id="caso-3"><a href="/casos/control-horas-extras/">Control de horas extras</a></h3>
+            <dl class="c-case__facts">
+              <div>
+                <dt>Contexto</dt>
+                <dd>Registro y seguimiento interno de horas extras.</dd>
+              </div>
+              <div>
+                <dt>Qué hice</dt>
+                <dd>APIs REST en .NET, integración con SQL Server y deploy en Azure.</dd>
+              </div>
+            </dl>
+            <p class="c-case__stack"><span class="u-visually-hidden">Stack: </span>.NET · Angular · SQL Server · Azure</p>
+          </article>
+        </div>
+        <p class="c-section-link"><a class="c-btn c-btn--text" href="/casos/">Ver más casos</a></p>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="stack" aria-labelledby="s05">
+      <div class="l-container">
+        <h2 class="c-label" id="s05"><span class="c-label__num">05</span> · Stack</h2>
+        <!-- TODO: confirmar el reparto antes de publicar. Python puede ir al primer grupo; TypeScript, AWS, Kubernetes y Terraform no figuran en el historial con evidencia -->
+        <div class="c-stack">
+          <section class="c-stack__group" aria-labelledby="stack-1">
+            <h3 class="c-stack__title" id="stack-1">Uso todos los días</h3>
+            <ul class="c-stack__items" role="list">
+              <li>Java</li>
+              <li>C#/.NET</li>
+              <li>PHP</li>
+              <li>JavaScript y TypeScript</li>
+              <li>SQL</li>
+              <li>Git</li>
+            </ul>
+          </section>
+          <section class="c-stack__group" aria-labelledby="stack-2">
+            <h3 class="c-stack__title" id="stack-2">IA aplicada, a diario</h3>
+            <ul class="c-stack__items" role="list">
+              <li>Modelos por API de distintos proveedores</li>
+              <li>Agentes con herramientas</li>
+              <li>Servidores MCP</li>
+              <li>Auditoría de código generado</li>
+              <li>Criterios de uso y de no uso</li>
+            </ul>
+          </section>
+          <section class="c-stack__group" aria-labelledby="stack-3">
+            <h3 class="c-stack__title" id="stack-3">Uso cuando el proyecto lo pide</h3>
+            <ul class="c-stack__items" role="list">
+              <li>Spring Boot</li>
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>Laravel</li>
+              <li>Angular</li>
+              <li>Vue</li>
+              <li>React</li>
+              <li>APIs REST</li>
+              <li>GraphQL</li>
+              <li>MongoDB</li>
+              <li>Redis</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+            </ul>
+          </section>
+          <section class="c-stack__group" aria-labelledby="stack-4">
+            <h3 class="c-stack__title" id="stack-4">Sé lo suficiente para no romperlo</h3>
+            <ul class="c-stack__items" role="list">
+              <li>Azure</li>
+              <li>AWS</li>
+              <li>Kubernetes</li>
+              <li>Terraform</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="articulos" aria-labelledby="s06">
+      <div class="l-container">
+        <h2 class="c-label" id="s06"><span class="c-label__num">06</span> · Artículos recientes</h2>
+        <ul class="c-posts" role="list">
+          <li>
+            <article class="c-post" aria-labelledby="post-1">
+              <p class="c-post__meta"><span>Seguridad</span> <time datetime="2026-10-26">26 oct 2026</time></p>
+              <h3 class="c-post__title" id="post-1"><a href="/blog/owasp-top-10-sitio-estatico/">Cómo apliqué el OWASP Top 10 en este sitio</a></h3>
+              <p class="c-post__summary">La CSP, las fuentes autoalojadas, cero dependencias y lo que un sitio estático no puede proteger.</p>
+            </article>
+          </li>
+          <li>
+            <article class="c-post" aria-labelledby="post-2">
+              <p class="c-post__meta"><span>IA aplicada</span> <time datetime="2026-10-26">26 oct 2026</time></p>
+              <h3 class="c-post__title" id="post-2"><a href="/blog/cuando-no-usar-ia/">Cuándo no usar IA</a></h3>
+              <p class="c-post__summary">Por qué un índice faltante no se arregla con un prompt y qué preguntar antes de integrar un modelo.</p>
+            </article>
+          </li>
+          <li>
+            <article class="c-post" aria-labelledby="post-3">
+              <p class="c-post__meta"><span>IA aplicada</span> <time datetime="2026-10-26">26 oct 2026</time></p>
+              <h3 class="c-post__title" id="post-3"><a href="/blog/auditar-codigo-generado-ia/">Cómo audito el código que escribe un modelo</a></h3>
+              <p class="c-post__summary">La lista corta que uso antes de aprobar un cambio que salió de un modelo.</p>
+            </article>
+          </li>
+        </ul>
+        <p class="c-section-link"><a class="c-btn c-btn--text" href="/blog/">Leer el blog</a></p>
+      </div>
+    </section>
+
+    <section class="l-section l-section--deferred" id="contacto" aria-labelledby="s07">
+      <div class="l-container l-grid">
+        <h2 class="c-label l-span-12" id="s07"><span class="c-label__num">07</span> · Contacto</h2>
+        <div class="l-span-8">
+          <p class="c-contact__line">Escríbeme y te respondo yo, no un formulario.</p>
+          <p class="c-contact__text">Disponible para trabajo remoto desde UTC-5.</p>
+          <div class="c-contact__actions">
+            <a class="c-btn c-btn--solid" href="mailto:jtf2308@gmail.com?subject=Contacto%20desde%20guajilodev">Escribir un correo</a>
+            <a class="c-btn c-btn--text" href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a>
+            <a class="c-btn c-btn--text" href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Pie de página">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Correo</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/colofon/">Colofón</a></li>
+        </ul>
+      </nav>
+      <p class="c-footer__note l-span-12">Sitio estático, sin frameworks, sin cookies y sin trackers · © 2026 José Tovar</p>
+    </div>
+  </footer>
+</body>
+</html>

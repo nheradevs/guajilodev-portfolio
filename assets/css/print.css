@@ -1,0 +1,53 @@
+@layer utilities {
+  /* En papel los tokens pasan a negro sobre blanco y el resto del CSS no cambia */
+  :root {
+    color-scheme: light;
+    --bg: var(--paper);
+    --bg-sunken: var(--paper);
+    --surface: var(--paper);
+    --surface-2: var(--paper);
+    --ink: var(--paper-ink);
+    --ink-2: var(--paper-ink);
+    --ink-3: var(--paper-ink);
+    --line: var(--paper-ink);
+    --line-strong: var(--paper-ink);
+    --accent: var(--paper-ink);
+    --accent-ink: var(--paper);
+    --link: var(--paper-ink);
+  }
+
+  .c-skip,
+  .c-menu-btn,
+  .c-header__panel,
+  .c-hero__actions,
+  .c-contact__actions,
+  .c-code__copy,
+  .c-langband {
+    display: none;
+  }
+
+  .c-header.is-pinned {
+    position: static;
+  }
+
+  .l-section--deferred {
+    content-visibility: visible;
+  }
+
+  .l-section,
+  .c-hero {
+    padding-block: 1.5rem;
+  }
+
+  a[href^="http"]::after,
+  a[href^="mailto:"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  .c-case,
+  .c-list__item,
+  .c-post {
+    break-inside: avoid;
+  }
+}

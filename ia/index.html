@@ -1,0 +1,211 @@
+<!-- pair: /ia/ <-> /en/ai/ -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <title>Integración de IA y auditoría de código · José Tovar</title>
+  <meta name="description" content="Criterios de uso y de no uso, límites de acceso de los agentes y auditoría del código generado por modelos antes de que llegue a producción en un sistema real">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <link rel="canonical" href="https://guajilodev.netlify.app/ia/">
+  <link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/ia/">
+  <link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/ai/">
+  <link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/ia/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="guajilodev">
+  <meta property="og:title" content="Integración de IA y auditoría de código">
+  <meta property="og:description" content="Criterios de uso y de no uso, límites de acceso de los agentes y auditoría del código generado por modelos antes de que llegue a producción en un sistema real">
+  <meta property="og:url" content="https://guajilodev.netlify.app/ia/">
+  <meta property="og:image" content="https://guajilodev.netlify.app/assets/img/og/og-ia-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarjeta de guajilodev con el título «IA aplicada, con límites y revisión»">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://guajilodev.netlify.app/"},{"@type":"ListItem","position":2,"name":"IA aplicada, con límites y revisión","item":"https://guajilodev.netlify.app/ia/"}]}</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, artículos" href="/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/" aria-label="guajilodev, inicio">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menú
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Principal">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/casos/">Casos</a></li>
+              <li><a class="c-nav__link" href="/ia/" aria-current="page">IA</a></li>
+              <li><a class="c-nav__link" href="/blog/">Blog</a></li>
+              <li><a class="c-nav__link" href="/sobre-mi/">Sobre mí</a></li>
+              <li><a class="c-nav__link" href="/contacto/">Contacto</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Idioma">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/ia/" hreflang="es" lang="es" aria-label="Español" aria-current="true" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/ai/" hreflang="en" lang="en" aria-label="English" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <header class="c-page-head l-container" data-hero>
+        <p class="c-page-head__label">IA aplicada</p>
+        <h1 class="c-page-head__title">IA aplicada, con límites y revisión</h1>
+        <p class="c-page-head__lead">Integro modelos, agentes y servidores MCP en sistemas que ya están en producción. Cada integración tiene un límite escrito y cada línea generada pasa por revisión antes del deploy.</p>
+    </header>
+    <div class="l-container l-grid c-page-body">
+      <nav class="l-span-3 c-toc c-toc--page" aria-labelledby="toc-ia">
+        <p class="c-toc__title" id="toc-ia">En esta página</p>
+        <ol class="c-toc__list" role="list">
+          <li><a href="#cuando-si">Cuándo uso un modelo</a></li>
+          <li><a href="#cuando-no">Cuándo no</a></li>
+          <li><a href="#agentes">Agentes con permisos acotados</a></li>
+          <li><a href="#mcp">Servidores MCP</a></li>
+          <li><a href="#datos">Qué datos no salen</a></li>
+          <li><a href="#auditoria">Cómo audito el código generado</a></li>
+          <li><a href="#ejemplo">Un ejemplo de revisión</a></li>
+          <li><a href="#casos-ia">Casos y artículos</a></li>
+        </ol>
+      </nav>
+      <div class="l-from-5 c-prose">
+        <!-- TODO: proveedores, modelos y frameworks de IA que uso de verdad. No se nombran hasta confirmarlos -->
+        <h2 id="cuando-si">Cuándo uso un modelo</h2>
+        <p>Uso un modelo cuando la tarea se repite, tiene una entrada clara y alguien puede revisar la salida. Clasificar texto libre, extraer datos de documentos o preparar un primer borrador son buenos candidatos.</p>
+        <p>Si la tarea pasa una vez al mes, un script o una persona la resuelve mejor y más barato.</p>
+
+        <h2 id="cuando-no">Cuándo no</h2>
+        <ul>
+          <li>Una consulta lenta por un índice faltante. Eso se mide y se arregla en la base de datos.</li>
+          <li>Un modelo de datos mal pensado. La IA hereda el desorden y lo repite más rápido.</li>
+          <li>Un proceso que nadie definió. Automatizarlo solo produce confusión con mejor tiempo de respuesta.</li>
+        </ul>
+        <p>Cuando la respuesta es código y no IA, lo digo. Lo desarrollo en <a href="/blog/cuando-no-usar-ia/">cuándo no usar IA</a>.</p>
+
+        <h2 id="agentes">Agentes con permisos acotados</h2>
+        <p>Un agente recibe las herramientas que la tarea necesita y ninguna más. Cada herramienta tiene un alcance definido: qué puede leer, qué puede escribir y qué queda registrado.</p>
+        <p>Las acciones que cambian datos o salen del sistema piden confirmación de una persona. Un agente sin límites es un incidente esperando su turno.</p>
+        <figure class="c-figure c-figure--16x9">
+          <!-- alt previsto: Flujo entre el agente, sus herramientas y el límite de acceso de cada una -->
+          <div class="c-figure__slot" data-alt="Flujo entre el agente, sus herramientas y el límite de acceso de cada una">Diagrama pendiente</div>
+          <figcaption>Qué puede leer, qué puede escribir y qué queda registrado en cada herramienta del agente.</figcaption>
+        </figure>
+
+        <h2 id="mcp">Servidores MCP</h2>
+        <p>MCP (Model Context Protocol) es un protocolo abierto para conectar un modelo con herramientas y datos propios. Lo uso para exponer solo lo que la tarea necesita. Cada servidor tiene credenciales propias y no escribe cuando la tarea es de lectura.</p>
+        <p>Lo que el agente no puede leer, no puede filtrar.</p>
+
+        <h2 id="datos">Qué datos no salen del entorno</h2>
+        <ul>
+          <li>Credenciales, claves y secretos de cualquier tipo.</li>
+          <li>Datos personales de clientes, salvo acuerdo explícito.</li>
+          <li>Código o datos que el contrato marca como confidenciales.</li>
+        </ul>
+        <p>Antes de conectar el modelo de un proveedor externo reviso qué se envía, qué conserva el proveedor y por cuánto tiempo.</p>
+
+        <h2 id="auditoria">Cómo audito el código generado</h2>
+        <p>Leo lo que el modelo escribe antes de que llegue a producción. Rápido no es lo mismo que correcto.</p>
+        <ol>
+          <li><strong>Validación de entrada.</strong> Qué pasa con un valor vacío, enorme o malicioso.</li>
+          <li><strong>Contratos.</strong> Si la función devuelve lo que el resto del sistema espera.</li>
+          <li><strong>Manejo de errores.</strong> Si el error se registra, se propaga o se traga.</li>
+          <li><strong>Dependencias.</strong> Si apareció una librería nueva y quién la mantiene.</li>
+          <li><strong>Secretos.</strong> Si quedó una clave, un token o una URL interna en el código.</li>
+          <li><strong>Pruebas.</strong> Si hay una prueba que falle cuando el cambio está mal.</li>
+        </ol>
+        <p>La lista completa, con ejemplos, está en <a href="/blog/auditar-codigo-generado-ia/">cómo audito el código que escribe un modelo</a>.</p>
+
+        <h2 id="ejemplo">Un ejemplo de revisión</h2>
+        <p>Ejemplo ilustrativo, escrito para esta página. No viene de un cliente.</p>
+        <div class="c-code" data-copy>
+          <pre tabindex="0"><code><span class="tok-com"># Lo que propuso el modelo</span>
+<span class="tok-kw">def</span> buscar_ventas(request):
+    cliente = request.args[<span class="tok-str">"cliente"</span>]
+    sql = <span class="tok-str">f"SELECT * FROM ventas WHERE cliente = '{cliente}'"</span>
+    filas = db.execute(sql).fetchall()
+    <span class="tok-kw">return</span> {<span class="tok-str">"filas"</span>: filas}</code></pre>
+        </div>
+        <p>Compila y devuelve datos. En la revisión aparecen cinco problemas:</p>
+        <ol>
+          <li>Arma el SQL con el valor que manda el usuario. Eso es inyección SQL.</li>
+          <li>Si falta el parámetro, la excepción llega cruda al usuario.</li>
+          <li><code>SELECT *</code> devuelve columnas que la pantalla no usa y que quizá no debería ver.</li>
+          <li>No hay límite de filas. Un cliente con años de histórico trae la tabla entera.</li>
+          <li>Ninguna prueba cubre estos casos.</li>
+        </ol>
+        <div class="c-code" data-copy>
+          <pre tabindex="0"><code><span class="tok-com"># Lo que llegó a producción después de la revisión</span>
+<span class="tok-kw">def</span> buscar_ventas(request):
+    cliente = request.args.get(<span class="tok-str">"cliente"</span>, <span class="tok-str">""</span>).strip()
+    <span class="tok-kw">if not</span> cliente <span class="tok-kw">or</span> len(cliente) &gt; 64:
+        <span class="tok-kw">return</span> {<span class="tok-str">"error"</span>: <span class="tok-str">"cliente inválido"</span>}, 400
+
+    sql = (
+        <span class="tok-str">"SELECT id, fecha, total FROM ventas "</span>
+        <span class="tok-str">"WHERE cliente = %s ORDER BY fecha DESC LIMIT 100"</span>
+    )
+    filas = db.execute(sql, (cliente,)).fetchall()
+    <span class="tok-kw">return</span> {<span class="tok-str">"filas"</span>: filas}</code></pre>
+        </div>
+        <aside class="c-callout c-callout--warning" aria-label="Advertencia">
+          <p class="c-callout__label">Advertencia</p>
+          <p>La versión corregida todavía necesita sus pruebas. La revisión encuentra el problema; la prueba evita que vuelva.</p>
+        </aside>
+
+        <h2 id="casos-ia">Casos y artículos</h2>
+        <p>El caso de IA aplicada todavía no está publicado. No lo voy a rellenar con un ejemplo inventado. Mientras tanto, los <a href="/casos/">casos de sistemas en producción</a> muestran cómo trabajo sobre código que ya existe.</p>
+        <ul>
+          <li><a href="/blog/cuando-no-usar-ia/">Cuándo no usar IA</a></li>
+          <li><a href="/blog/auditar-codigo-generado-ia/">Cómo audito el código que escribe un modelo</a></li>
+          <li><a href="/blog/owasp-top-10-sitio-estatico/">Cómo apliqué el OWASP Top 10 en este sitio</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Pie de página">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Correo</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/colofon/">Colofón</a></li>
+        </ul>
+      </nav>
+      <p class="c-footer__note l-span-12">Sitio estático, sin frameworks, sin cookies y sin trackers · © 2026 José Tovar</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guajilodev, artículos de José Tovar</title>
+    <link>https://guajilodev.netlify.app/</link>
+    <description>Sistemas en producción, seguridad e IA aplicada. Escritos a mano, con ejemplos</description>
+    <language>es</language>
+    <atom:link href="https://guajilodev.netlify.app/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 26 Oct 2026 09:00:00 -0500</lastBuildDate>
+    <item>
+      <title>Cómo apliqué el OWASP Top 10 en este sitio</title>
+      <link>https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/</guid>
+      <description>La CSP, las fuentes autoalojadas, cero dependencias y lo que un sitio estático no puede proteger.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>Cuándo no usar IA</title>
+      <link>https://guajilodev.netlify.app/blog/cuando-no-usar-ia/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/blog/cuando-no-usar-ia/</guid>
+      <description>Por qué un índice faltante no se arregla con un prompt y qué preguntar antes de integrar un modelo.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+    <item>
+      <title>Cómo audito el código que escribe un modelo</title>
+      <link>https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/</link>
+      <guid isPermaLink="true">https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/</guid>
+      <description>La lista corta que uso antes de aprobar un cambio que salió de un modelo.</description>
+      <pubDate>Mon, 26 Oct 2026 09:00:00 -0500</pubDate>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,134 @@
+<!-- pair: /colofon/ <-> /en/colophon/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <title>Secure static site without frameworks · José Tovar</title>
+  <meta name="description" content="How this static site is built without frameworks: strict CSP, zero dependencies, self-hosted fonts, WCAG 2.2 AA accessibility, and the reason for each">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <link rel="canonical" href="https://guajilodev.netlify.app/en/colophon/">
+  <link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/colofon/">
+  <link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/colophon/">
+  <link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/colofon/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="guajilodev">
+  <meta property="og:title" content="Secure static site without frameworks">
+  <meta property="og:description" content="How this static site is built without frameworks: strict CSP, zero dependencies, self-hosted fonts, WCAG 2.2 AA accessibility, and the reason for each">
+  <meta property="og:url" content="https://guajilodev.netlify.app/en/colophon/">
+  <meta property="og:image" content="https://guajilodev.netlify.app/assets/img/og/og-en-colophon-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="guajilodev card titled “How this site is built”">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_CO">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://guajilodev.netlify.app/en/"},{"@type":"ListItem","position":2,"name":"How this site is built","item":"https://guajilodev.netlify.app/en/colophon/"}]}</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, writing" href="/en/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Skip to content</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/en/" aria-label="guajilodev, home">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menu
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Main">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/en/case-studies/">Work</a></li>
+              <li><a class="c-nav__link" href="/en/ai/">AI</a></li>
+              <li><a class="c-nav__link" href="/en/blog/">Blog</a></li>
+              <li><a class="c-nav__link" href="/en/about/">About</a></li>
+              <li><a class="c-nav__link" href="/en/contact/">Contact</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Language">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/colofon/" hreflang="es" lang="es" aria-label="Español" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/colophon/" hreflang="en" lang="en" aria-label="English" aria-current="true" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <header class="c-page-head l-container" data-hero>
+        <p class="c-page-head__label">Colophon</p>
+        <h1 class="c-page-head__title">How this site is built</h1>
+        <p class="c-page-head__lead">HTML, CSS, and JavaScript written by hand. No frameworks, no build step, and no third-party dependencies.</p>
+    </header>
+    <div class="l-container l-grid c-page-body">
+      <div class="l-span-8 c-prose">
+        <h2>No build, no dependencies</h2>
+        <p>Every page is an HTML file. There’s no compile step, no npm, and no third-party libraries in the browser. What’s in the repository is what gets published.</p>
+
+        <h2>Typography</h2>
+        <p>Three self-hosted families in woff2, under the SIL Open Font License: Archivo for headings and interface, Source Serif 4 for article body text, and JetBrains Mono for labels and code.</p>
+        <p>The three weigh about 134&#8239;KB together. The latin-ext subset only downloads if a page uses a character that needs it.</p>
+
+        <h2>Color and contrast</h2>
+        <p>One theme, dark. The palette comes from three base tones, and the rest was measured to meet WCAG 2.2 AA (the W3C accessibility guidelines). Body text has a 10.9:1 contrast ratio against the background, and metadata, the faintest text, has 5.5:1.</p>
+
+        <h2 id="security">Security</h2>
+        <p>The Content Security Policy (CSP) blocks anything that doesn’t come from the site itself. The headers live in Netlify’s <code>_headers</code> file, because directives like <code>frame-ancestors</code> don’t work inside a meta tag.</p>
+        <p>The JavaScript doesn’t use <code>innerHTML</code> or <code>eval</code>. The DOM is built with <code>createElement</code> and <code>textContent</code>. The details are in <a href="/en/blog/owasp-top-10-static-site/">how I applied the OWASP Top 10 to this site</a>.</p>
+        <p>If you find a vulnerability, email me before publishing it and we’ll coordinate the fix. The contact is also in <a href="/.well-known/security.txt">security.txt</a>.</p>
+
+        <h2>Privacy</h2>
+        <p>No cookies, no analytics, and no trackers. The only thing stored in your browser is your language preference, and only if you choose one.</p>
+
+        <h2>Accessibility</h2>
+        <p>All content and navigation work without JavaScript. Without it, you only lose the copy button on code blocks. Focus is always visible, and motion turns off if your system asks for less animation.</p>
+
+        <h2>JavaScript</h2>
+        <p>One file of about 5&#8239;KB. It opens the menu on small screens, pins the header, offers the Spanish or English version, and copies code blocks.</p>
+
+        <h2>Licenses</h2>
+        <p>The fonts are distributed under the SIL Open Font License, included next to the files.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Footer">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (external site)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (external site)</span></a></li>
+          <li><a href="/en/feed.xml">RSS</a></li>
+          <li><a href="/en/colophon/">Colophon</a></li>
+        </ul>
+      </nav>
+      <p class="c-footer__note l-span-12">Static site. No frameworks, no cookies, no trackers. · © 2026 José Tovar</p>
+    </div>
+  </footer>
+</body>
+</html>

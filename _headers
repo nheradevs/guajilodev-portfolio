@@ -1,0 +1,45 @@
+# Fuente de verdad de las cabeceras HTTP. Netlify las aplica por ruta.
+# La CSP se repite en <meta> solo como respaldo cuando el archivo se abre sin servidor.
+# frame-ancestors solo tiene efecto aquí: dentro de <meta> el navegador la ignora.
+#
+# JSON-LD: los bloques <script type="application/ld+json"> son datos y el navegador no los ejecuta,
+# así que script-src 'self' no los bloquea y no hace falta hash. Si algún día se agrega un script
+# inline ejecutable, su hash se calcula con:
+#   printf '%s' 'CONTENIDO EXACTO DEL SCRIPT' | openssl dgst -sha256 -binary | openssl base64
+# y se suma a script-src como 'sha256-<resultado>'.
+#
+# connect-src 'self' en lugar de 'none': el JS no hace peticiones, pero con 'none' Lighthouse no puede
+# leer robots.txt desde la página y baja la nota de SEO. 'self' sigue bloqueando cualquier envío a terceros.
+#
+# HTML: Netlify ya responde con Cache-Control: public, max-age=0, must-revalidate.
+
+/*
+  Content-Security-Policy: default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin
+
+# Nombres estables que no cambian de contenido: caché de un año
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS y JS cambian sin cambiar de nombre: se revalidan en cada visita (con ETag cuesta poco)
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
+
+/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+
+/en/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8

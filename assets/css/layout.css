@@ -1,0 +1,60 @@
+@layer layout {
+  .l-container {
+    width: var(--container);
+    margin-inline: auto;
+  }
+
+  .l-section {
+    padding-block: var(--s-section);
+  }
+
+  /* Secciones bajo el pliegue: el navegador las pinta cuando se acercan */
+  .l-section--deferred {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 60rem;
+  }
+
+  .l-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-6);
+  }
+
+  @media (min-width: 56em) {
+    .l-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    .l-span-3 { grid-column: span 3; }
+    .l-span-5 { grid-column: span 5; }
+    .l-span-7 { grid-column: span 7; }
+    .l-span-8 { grid-column: span 8; }
+    .l-span-12 { grid-column: 1 / -1; }
+    /* Columna de inicio hasta el borde derecho */
+    .l-from-4 { grid-column: 4 / -1; }
+    .l-from-5 { grid-column: 5 / -1; }
+    .l-from-10 { grid-column: 10 / -1; }
+  }
+}
+
+@layer utilities {
+  [hidden] {
+    display: none;
+  }
+
+  .u-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .u-mt-section {
+    margin-top: var(--s-12);
+  }
+}

@@ -1,0 +1,130 @@
+<!-- pair: /blog/cuando-no-usar-ia/ <-> /en/blog/when-not-to-use-ai/ -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
+  <title>Cuándo no usar IA en un sistema en producción · José Tovar</title>
+  <meta name="description" content="Cuándo no usar IA en un sistema en producción: el problema antes que la herramienta, casos donde el modelo estorba y qué preguntar antes de integrar uno">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#1F2B23">
+  <link rel="canonical" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/">
+  <link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/">
+  <link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/">
+  <link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="guajilodev">
+  <meta property="og:title" content="Cuándo no usar IA en un sistema en producción">
+  <meta property="og:description" content="Cuándo no usar IA en un sistema en producción: el problema antes que la herramienta, casos donde el modelo estorba y qué preguntar antes de integrar uno">
+  <meta property="og:url" content="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/">
+  <meta property="og:image" content="https://guajilodev.netlify.app/assets/img/og/og-blog-cuando-no-usar-ia-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tarjeta de guajilodev con el título «Cuándo no usar IA»">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://guajilodev.netlify.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://guajilodev.netlify.app/blog/"},{"@type":"ListItem","position":3,"name":"Cuándo no usar IA","item":"https://guajilodev.netlify.app/blog/cuando-no-usar-ia/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Cuándo no usar IA","description":"Cuándo no usar IA en un sistema en producción: el problema antes que la herramienta, casos donde el modelo estorba y qué preguntar antes de integrar uno","inLanguage":"es","url":"https://guajilodev.netlify.app/blog/cuando-no-usar-ia/","mainEntityOfPage":"https://guajilodev.netlify.app/blog/cuando-no-usar-ia/","author":{"@id":"https://guajilodev.netlify.app/#persona"},"image":"https://guajilodev.netlify.app/assets/img/og/og-blog-cuando-no-usar-ia-1200x630.png"}</script>
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/archivo-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/print.css" media="print">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css"></noscript>
+  <link rel="alternate" type="application/rss+xml" title="guajilodev, artículos" href="/feed.xml">
+  <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body>
+  <a class="c-skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="c-header-slot">
+    <header class="c-header" data-header>
+      <div class="l-container c-header__inner">
+        <a class="c-logo" href="/" aria-label="guajilodev, inicio">guajilodev</a>
+        <button class="c-menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-button>
+          <svg class="c-menu-btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6.75" x2="20" y2="6.75"/>
+            <line class="c-menu-btn__mid" x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17.25" x2="20" y2="17.25"/>
+          </svg>
+          Menú
+        </button>
+        <div class="c-header__panel" id="menu-principal">
+          <nav aria-label="Principal">
+            <ul class="c-nav__list" role="list">
+              <li><a class="c-nav__link" href="/casos/">Casos</a></li>
+              <li><a class="c-nav__link" href="/ia/">IA</a></li>
+              <li><a class="c-nav__link" href="/blog/" aria-current="true">Blog</a></li>
+              <li><a class="c-nav__link" href="/sobre-mi/">Sobre mí</a></li>
+              <li><a class="c-nav__link" href="/contacto/">Contacto</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Idioma">
+            <ul class="c-lang__list" role="list">
+              <li><a class="c-lang__link" href="/blog/cuando-no-usar-ia/" hreflang="es" lang="es" aria-label="Español" aria-current="true" data-lang-link>ES</a></li>
+              <li><a class="c-lang__link" href="/en/blog/when-not-to-use-ai/" hreflang="en" lang="en" aria-label="English" data-lang-link>EN</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido">
+    <article class="l-container" aria-labelledby="titulo">
+      <header class="c-article__head" data-hero>
+        <nav class="c-crumbs" aria-label="Migas de pan"><ol class="c-crumbs__list" role="list"><li><a href="/">Inicio</a></li><li><a href="/blog/">Blog</a></li><li><span aria-current="page">Cuándo no usar IA</span></li></ol></nav>
+        <p class="c-article__meta"><span>IA aplicada</span><time datetime="2026-10-26">26 oct 2026</time><span>José Tovar</span></p>
+        <h1 class="c-article__title" id="titulo">Cuándo no usar IA</h1>
+      </header>
+      <figure class="c-figure c-figure--16x9 c-article__cover">
+          <div class="c-figure__slot" data-alt="Imagen de cabecera del artículo">Imagen pendiente</div>
+        </figure>
+      <div class="c-article">
+        <div class="c-article__body c-prose c-prose--serif">
+          <p>Uso modelos todos los días. Por eso mismo tengo una lista de situaciones donde no los meto.</p>
+          <p>Antes de integrar un modelo pregunto qué problema hay, quién lo sufre y cuánto cuesta hoy. Si esa respuesta no existe, el modelo tampoco tiene a qué apuntar.</p>
+          <p>Este artículo junta los casos donde el modelo estorba y las preguntas que hago antes de integrar uno.</p>
+          <div class="c-callout"><p class="c-callout__label">En preparación</p><p>El texto completo de este artículo se publica cuando esté terminado.</p></div>
+          <h2 id="relacionado">Relacionado</h2>
+          <ul><li><a href="/ia/">IA aplicada, con límites y revisión</a></li><li><a href="/casos/">Casos de sistemas en producción</a></li></ul>
+        </div>
+        <footer class="c-article__foot">
+          <section class="c-author" aria-label="Autor">
+            <p class="c-author__name">José Tovar</p>
+            <p class="c-author__text">Desarrollador senior y líder técnico. Arreglo y modernizo sistemas en producción desde 2011, ahora también con IA y con revisión del código que genera. <a href="/sobre-mi/">Más sobre mí</a>.</p>
+          </section>
+          <nav class="c-next" aria-label="Siguiente artículo">
+            <p class="c-next__label">Siguiente artículo</p>
+            <a class="c-next__link" href="/blog/auditar-codigo-generado-ia/">Cómo audito el código que escribe un modelo</a>
+          </nav>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <footer class="c-footer">
+    <div class="l-container l-grid">
+      <div class="l-span-5">
+        <p class="c-footer__name">José Tovar</p>
+        <p>guajilodev · Bogotá, Colombia</p>
+      </div>
+      <nav class="l-span-7" aria-label="Pie de página">
+        <ul class="c-footer__links" role="list">
+          <li><a href="mailto:jtf2308@gmail.com">Correo</a></li>
+          <li><a href="https://www.linkedin.com/in/jose-luis-tovar-fernandez/" rel="noopener noreferrer">LinkedIn<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="https://github.com/Guajilodev" rel="noopener noreferrer">GitHub<svg class="c-ext__icon" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M4 2h6v6M10 2 2 10"/></svg><span class="u-visually-hidden"> (sitio externo)</span></a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+          <li><a href="/colofon/">Colofón</a></li>
+        </ul>
+      </nav>
+      <p class="c-footer__note l-span-12">Sitio estático, sin frameworks, sin cookies y sin trackers · © 2026 José Tovar</p>
+    </div>
+  </footer>
+</body>
+</html>

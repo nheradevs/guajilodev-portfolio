@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Se actualiza a mano al publicar. lastmod es la fecha real del último cambio de cada página -->
+<!-- TODO: agregar image:image cuando existan el retrato y los diagramas (namespace http://www.google.com/schemas/sitemap-image/1.1) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://guajilodev.netlify.app/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/blog/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/auditing-ai-generated-code/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/blog/cuando-no-usar-ia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/owasp-top-10-static-site/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/casos/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/casos/canal-b2b-telecomunicaciones/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/canal-b2b-telecomunicaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/b2b-telecom-channel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/canal-b2b-telecomunicaciones/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/casos/compras-licitaciones-subastas/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/compras-licitaciones-subastas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/procurement-tenders-auctions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/compras-licitaciones-subastas/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/casos/control-horas-extras/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/control-horas-extras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/overtime-tracking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/control-horas-extras/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/responsible-business-awards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/colofon/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/colofon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/colophon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/colofon/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/contacto/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/contacto/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/ia/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/sobre-mi/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/sobre-mi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/sobre-mi/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/about/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/sobre-mi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/sobre-mi/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/ai/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/blog/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/blog/auditing-ai-generated-code/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/auditing-ai-generated-code/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/auditar-codigo-generado-ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/blog/owasp-top-10-static-site/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/owasp-top-10-static-site/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/owasp-top-10-sitio-estatico/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/blog/when-not-to-use-ai/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/blog/cuando-no-usar-ia/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/case-studies/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/case-studies/b2b-telecom-channel/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/canal-b2b-telecomunicaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/b2b-telecom-channel/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/canal-b2b-telecomunicaciones/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/case-studies/overtime-tracking/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/control-horas-extras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/overtime-tracking/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/control-horas-extras/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/case-studies/procurement-tenders-auctions/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/compras-licitaciones-subastas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/procurement-tenders-auctions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/compras-licitaciones-subastas/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/case-studies/responsible-business-awards/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/responsible-business-awards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/colophon/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/colofon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/colophon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/colofon/"/>
+  </url>
+  <url>
+    <loc>https://guajilodev.netlify.app/en/contact/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/contacto/"/>
+  </url>
+</urlset>

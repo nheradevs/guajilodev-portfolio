@@ -1,0 +1,10 @@
+/* Solo se carga sin JavaScript: el menú queda abierto en pantallas chicas */
+@media (max-width: 55.99em) {
+  .c-menu-btn {
+    display: none;
+  }
+
+  .c-header__panel {
+    display: block;
+  }
+}

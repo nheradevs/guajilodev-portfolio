@@ -1,0 +1,15 @@
+# Barra final: Netlify sirve cada carpeta en su forma con barra (/casos/) y responde 301
+# desde la forma sin barra (/casos y /en). No se agregan reglas /x -> /x/ porque Netlify
+# normaliza la barra al comparar y esas reglas generan un bucle.
+
+# Archivos del repositorio que no son páginas
+/blog/_template.html  /404.html  404!
+/README.md            /404.html  404!
+/netlify.toml         /404.html  404!
+/.gitignore           /404.html  404!
+
+# TODO: dominio. Descomentar cuando exista, para que el subdominio de Netlify no duplique el sitio
+# https://guajilodev.netlify.app/*  https://guajilodev.netlify.app/:splat  301!
+
+# Rutas en inglés que no existen: la 404 en inglés
+/en/*  /en/404.html  404
