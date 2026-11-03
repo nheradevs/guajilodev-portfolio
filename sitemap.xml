@@ -73,13 +73,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
   </url>
   <url>
-    <loc>https://guajilodev.netlify.app/colofon/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/colofon/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/colophon/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/colofon/"/>
-  </url>
-  <url>
     <loc>https://guajilodev.netlify.app/contacto/</loc>
     <lastmod>2026-10-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/contacto/"/>
@@ -183,13 +176,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/case-studies/responsible-business-awards/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/casos/reconocimientos-empresas-responsables/"/>
-  </url>
-  <url>
-    <loc>https://guajilodev.netlify.app/en/colophon/</loc>
-    <lastmod>2026-10-26</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://guajilodev.netlify.app/colofon/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://guajilodev.netlify.app/en/colophon/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://guajilodev.netlify.app/colofon/"/>
   </url>
   <url>
     <loc>https://guajilodev.netlify.app/en/contact/</loc>

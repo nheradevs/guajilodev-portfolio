@@ -484,7 +484,7 @@
   .c-cases {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--s-12) var(--s-6);
+    gap: var(--s-8) var(--s-6);
     margin: 0;
   }
 
@@ -492,7 +492,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--s-4);
-    padding-top: var(--s-6);
   }
 
   .c-case__meta {
@@ -539,7 +538,8 @@
   }
 
   .c-case__stack {
-    padding-top: var(--s-3);
+    margin-top: auto;
+    padding-top: var(--s-4);
     color: var(--ink-2);
     font-family: var(--font-body);
     font-size: var(--fs-mono);
@@ -550,18 +550,9 @@
   }
 
   @media (min-width: 56em) {
+    /* Cuatro casos, cuatro celdas iguales */
     .c-cases {
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-    }
-
-    .c-cases > :nth-child(4n + 1),
-    .c-cases > :nth-child(4n + 4) {
-      grid-column: span 7;
-    }
-
-    .c-cases > :nth-child(4n + 2),
-    .c-cases > :nth-child(4n + 3) {
-      grid-column: span 5;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -1024,6 +1015,11 @@
     padding-bottom: var(--s-section);
   }
 
+  /* Pagina sin cabecera de titulo: el primer bloque necesita aire propio */
+  .c-page-body--flush {
+    padding-block-start: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
   /* Migas de pan */
   .c-crumbs__list {
     display: flex;
@@ -1422,10 +1418,9 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--s-3);
-    padding: var(--s-6);
-    background: var(--surface-2);
-    border-radius: var(--radius);
+    padding: var(--s-6) 0;
     color: var(--ink);
+    text-decoration: none;
   }
 
   .c-ia__next-line {

@@ -12,4 +12,8 @@
 # https://guajilodev.netlify.app/*  https://guajilodev.netlify.app/:splat  301!
 
 # Rutas en inglés que no existen: la 404 en inglés
+# Pagina retirada: el contenido vive en el articulo de OWASP
+/colofon/        /blog/owasp-top-10-sitio-estatico/  301
+/en/colophon/    /en/blog/owasp-top-10-static-site/  301
+
 /en/*  /en/404.html  404
