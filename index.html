@@ -78,7 +78,6 @@
     <section class="c-hero" aria-labelledby="hero-titulo" data-hero>
       <div class="l-container l-grid">
         <div class="l-span-7">
-          <p class="c-hero__place">Bogotá, Colombia · remoto · UTC-5</p>
           <h1 class="c-hero__title" id="hero-titulo">Meto IA en sistemas que ya están en producción. <span class="c-hero__em">Y audito lo que escribe.</span></h1>
           <p class="c-hero__lead">Desde 2011 arreglo y modernizo sistemas que sostienen negocios. Ahora también con modelos, agentes y servidores <abbr title="Model Context Protocol">MCP</abbr> adentro, y con revisión del código que generan antes de que llegue a producción.</p>
           <p class="c-hero__stack"><span class="u-visually-hidden">Herramientas principales: </span>Java · Spring Boot · .NET · Node · Python · PostgreSQL · APIs REST · modelos · agentes · MCP</p>
@@ -87,7 +86,10 @@
             <a class="c-btn c-btn--text" href="#contacto">Escríbeme</a>
           </div>
         </div>
-        <div class="l-from-10 c-hero__aside">
+        <div class="l-from-9 c-hero__aside">
+          <figure class="c-figure c-figure--4x5">
+            <div class="c-figure__slot" data-alt="Retrato de José Tovar">Retrato pendiente</div>
+          </figure>
           <dl class="c-facts">
             <div class="c-facts__item">
               <dt>Desde</dt>
@@ -163,49 +165,37 @@
     <section class="l-section l-section--deferred" id="ia-aplicada" aria-labelledby="s02">
       <div class="l-container">
         <h2 class="c-section__title" id="s02">IA aplicada</h2>
-        <ol class="c-list c-list--notes" role="list">
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">01</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Modelos dentro del flujo de trabajo</h3>
-              <p class="c-list__text">Integro modelos de distintos proveedores por API en herramientas internas que el equipo abre todos los días.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> si la tarea no se repite, no justifica un modelo.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">02</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Agentes con herramientas acotadas</h3>
-              <p class="c-list__text">Permisos claros, alcance definido y registro de lo que hacen.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Riesgo:</span> un agente sin límites es un incidente esperando su turno.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">03</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Servidores MCP</h3>
-              <p class="c-list__text">Conecto modelos con herramientas y datos propios usando MCP (Model Context Protocol), con el acceso mínimo que la tarea necesita.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> lo que el agente no puede leer, no puede filtrar.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">04</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Auditoría del código generado</h3>
-              <p class="c-list__text">Leo lo que el modelo escribe antes de que llegue a producción: validación de entrada, contratos, manejo de errores, dependencias y pruebas.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Riesgo:</span> rápido no es lo mismo que correcto.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">05</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Criterio para no usarla</h3>
-              <p class="c-list__text">Un modelo no arregla un índice faltante, un modelo de datos mal pensado ni un proceso que nadie definió.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Límite:</span> cuando la respuesta es código y no IA, lo digo.</p>
-          </li>
-        </ol>
-        <p class="c-section-link"><a class="c-btn c-btn--text" href="/ia/">Leer los criterios</a></p>
+        <div class="c-ia">
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Modelos dentro del flujo de trabajo</h3>
+            <p class="c-ia__text">Integro modelos de distintos proveedores por API en herramientas internas que el equipo abre todos los días.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Límite:</span> si la tarea no se repite, no justifica un modelo.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Agentes con herramientas acotadas</h3>
+            <p class="c-ia__text">Permisos claros, alcance definido y registro de lo que hacen.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Riesgo:</span> un agente sin límites es un incidente esperando su turno.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Servidores MCP</h3>
+            <p class="c-ia__text">Conecto modelos con herramientas y datos propios usando MCP (Model Context Protocol), con el acceso mínimo que la tarea necesita.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Límite:</span> lo que el agente no puede leer, no puede filtrar.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Auditoría del código generado</h3>
+            <p class="c-ia__text">Leo lo que el modelo escribe antes de que llegue a producción: validación de entrada, contratos, manejo de errores, dependencias y pruebas.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Riesgo:</span> rápido no es lo mismo que correcto.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Criterio para no usarla</h3>
+            <p class="c-ia__text">Un modelo no arregla un índice faltante, un modelo de datos mal pensado ni un proceso que nadie definió.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Límite:</span> cuando la respuesta es código y no IA, lo digo.</p>
+          </article>
+          <a class="c-ia__next" href="/ia/">
+            <span class="c-ia__next-line">Nadie leyó lo que escribió el modelo. El deploy salió igual.</span>
+            <span class="c-ia__next-link">Los criterios de IA, con lo que no hago</span>
+          </a>
+        </div>
       </div>
     </section>
 

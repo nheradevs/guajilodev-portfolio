@@ -236,11 +236,6 @@
     padding-block: clamp(3rem, 8vw, 6.5rem) var(--s-section);
   }
 
-  .c-hero__place {
-    color: var(--ink-3);
-    font-family: var(--font-body);
-    font-size: var(--fs-mono);
-  }
 
   .c-hero__title {
     max-width: 22ch;
@@ -278,7 +273,15 @@
   }
 
   .c-hero__aside {
+    display: grid;
+    gap: var(--s-6);
     align-self: end;
+    align-content: end;
+  }
+
+  /* El retrato no compite en alto con la columna de texto */
+  .c-hero__aside .c-figure {
+    max-width: 264px;
   }
 
   /* Datos cortos */
@@ -1286,3 +1289,83 @@
     color: var(--link);
   }
 }
+
+  /* IA aplicada: cinco tarjetas iguales y una celda de enlace */
+  .c-ia {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-5);
+  }
+
+  .c-ia__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    min-height: 206px;
+    padding: var(--s-6);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+
+  .c-ia__title {
+    color: var(--ink);
+    font-size: 1.1875rem;
+    font-weight: var(--wght-title);
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  .c-ia__text {
+    color: var(--ink-2);
+    font-size: var(--fs-sm);
+    line-height: 1.55;
+  }
+
+  .c-ia__limit {
+    margin-top: auto;
+    padding-top: var(--s-3);
+    color: var(--ink-3);
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+
+  .c-ia__key {
+    color: var(--ink-2);
+  }
+
+  .c-ia__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--s-3);
+    padding: var(--s-6);
+    background: var(--surface-2);
+    border-radius: var(--radius);
+    color: var(--ink);
+  }
+
+  .c-ia__next-line {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    font-weight: var(--wght-title);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .c-ia__next-link {
+    color: var(--ink-2);
+    font-size: var(--fs-base);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .c-ia__next:hover .c-ia__next-link {
+    text-decoration-thickness: 2px;
+  }
+
+  @media (max-width: 56em) {
+    .c-ia {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }

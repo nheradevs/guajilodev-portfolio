@@ -78,7 +78,6 @@
     <section class="c-hero" aria-labelledby="hero-title" data-hero>
       <div class="l-container l-grid">
         <div class="l-span-7">
-          <p class="c-hero__place">Bogotá, Colombia · remote · UTC-5</p>
           <h1 class="c-hero__title" id="hero-title">I put AI inside production systems. <span class="c-hero__em">Then I audit what it writes.</span></h1>
           <p class="c-hero__lead">Since 2011 I’ve been fixing and modernizing systems businesses run on. Now with models, agents, and <abbr title="Model Context Protocol">MCP</abbr> servers in the mix, and a review of the code they produce before it ships.</p>
           <p class="c-hero__stack"><span class="u-visually-hidden">Main tools: </span>Java · Spring Boot · .NET · Node · Python · PostgreSQL · REST APIs · models · agents · MCP</p>
@@ -87,7 +86,10 @@
             <a class="c-btn c-btn--text" href="#contact">Email me</a>
           </div>
         </div>
-        <div class="l-from-10 c-hero__aside">
+        <div class="l-from-9 c-hero__aside">
+          <figure class="c-figure c-figure--4x5">
+            <div class="c-figure__slot" data-alt="Portrait of José Tovar">Portrait pending</div>
+          </figure>
           <dl class="c-facts">
             <div class="c-facts__item">
               <dt>Since</dt>
@@ -163,49 +165,37 @@
     <section class="l-section l-section--deferred" id="applied-ai" aria-labelledby="s02">
       <div class="l-container">
         <h2 class="c-section__title" id="s02">Applied AI</h2>
-        <ol class="c-list c-list--notes" role="list">
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">01</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Models inside the workflow</h3>
-              <p class="c-list__text">I integrate models from different providers via API into internal tools the team opens every day.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Limit:</span> if the task doesn’t repeat, it doesn’t justify a model.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">02</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Agents with scoped tools</h3>
-              <p class="c-list__text">Clear permissions, defined scope, and a log of what they do.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Risk:</span> an agent without limits is an incident waiting its turn.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">03</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">MCP servers</h3>
-              <p class="c-list__text">I connect models to in-house tools and data using MCP (Model Context Protocol), with the minimum access the task needs.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Limit:</span> what the agent can’t read, it can’t leak.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">04</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Auditing generated code</h3>
-              <p class="c-list__text">I read what the model writes before it ships: input validation, contracts, error handling, dependencies, and tests.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Risk:</span> fast isn’t the same as correct.</p>
-          </li>
-          <li class="c-list__item">
-            <span class="c-list__num" aria-hidden="true">05</span>
-            <div class="c-list__body">
-              <h3 class="c-list__title">Knowing when not to use it</h3>
-              <p class="c-list__text">A model won’t fix a missing index, a badly designed data model, or a process nobody defined.</p>
-            </div>
-            <p class="c-list__note"><span class="c-list__note-key">Limit:</span> when the answer is code and not AI, I say so.</p>
-          </li>
-        </ol>
-        <p class="c-section-link"><a class="c-btn c-btn--text" href="/en/ai/">Read the criteria</a></p>
+        <div class="c-ia">
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Models inside the workflow</h3>
+            <p class="c-ia__text">I integrate models from different providers via API into internal tools the team opens every day.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Limit:</span> if the task doesn’t repeat, it doesn’t justify a model.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Agents with scoped tools</h3>
+            <p class="c-ia__text">Clear permissions, defined scope, and a log of what they do.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Risk:</span> an agent without limits is an incident waiting its turn.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">MCP servers</h3>
+            <p class="c-ia__text">I connect models to in-house tools and data using MCP (Model Context Protocol), with the minimum access the task needs.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Limit:</span> what the agent can’t read, it can’t leak.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Auditing generated code</h3>
+            <p class="c-ia__text">I read what the model writes before it ships: input validation, contracts, error handling, dependencies, and tests.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Risk:</span> fast isn’t the same as correct.</p>
+          </article>
+          <article class="c-ia__card">
+            <h3 class="c-ia__title">Knowing when not to use it</h3>
+            <p class="c-ia__text">A model won’t fix a missing index, a badly designed data model, or a process nobody defined.</p>
+            <p class="c-ia__limit"><span class="c-ia__key">Limit:</span> when the answer is code and not AI, I say so.</p>
+          </article>
+          <a class="c-ia__next" href="/en/ai/">
+            <span class="c-ia__next-line">Nobody read what the model wrote. The deploy shipped anyway.</span>
+            <span class="c-ia__next-link">Where I draw the line with AI</span>
+          </a>
+        </div>
       </div>
     </section>
 
