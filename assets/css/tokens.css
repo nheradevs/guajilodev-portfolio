@@ -44,6 +44,16 @@
     --accent: #266CA9;       /* 3.5:1: solo gráficos, bordes y foco, nunca texto sobre el */
     --accent-ink: #ADE1FB;   /* texto sobre --surface-2, 9.8:1 */
     --link: #7CC4EE;         /* 10.2:1 */
+    /* Ronda de diseño 01: naranja de accion y neutros */
+    --cta: #F16913;          /* 6.3:1 sobre --bg, 6.0:1 sobre --carbon */
+    --cta-ink: #0B0C0F;      /* 6.3:1 sobre --cta: el texto de la pastilla */
+    --cta-hover: #FD8D3C;    /* 8.4:1 con --cta-ink */
+    --carbon: #101216;       /* fondo de la banda de cierre */
+    --chalk: #F7F8FA;
+    --gray: #C9CDD3;
+    --pill-line: #6E747C;    /* 3.97:1 sobre --carbon */
+    --radius-band: 18px;     /* unica excepcion a --radius: 2px */
+
     --paper: #FFFFFF;        /* solo print.css */
     --paper-ink: #000000;    /* solo print.css */
 

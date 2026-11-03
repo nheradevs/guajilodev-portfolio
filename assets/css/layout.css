@@ -58,3 +58,8 @@
     margin-top: var(--s-12);
   }
 }
+
+  /* Seccion que sigue a un bloque ya espaciado: no suma aire de mas */
+  .l-section--tight {
+    padding-block-start: var(--s-8);
+  }
