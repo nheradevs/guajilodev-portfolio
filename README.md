@@ -4,7 +4,7 @@ Portafolio y blog de José Tovar, en español (`/`) y en inglés (`/en/`). HTML,
 
 Ver en local: `python3 -m http.server 8000` en la raíz y abrir `http://localhost:8000`. Las rutas son absolutas, así que `file://` no sirve.
 
-Despliegue: conectar el repositorio a Netlify o arrastrar la carpeta. No hay comando de build; `netlify.toml` publica la raíz.
+Despliegue: Cloudflare Pages conectado a este repositorio. En la configuración del proyecto van tres datos: sin comando de build, directorio de salida `/` y nombre del proyecto `guajilodev`, para que el subdominio coincida con el dominio escrito en `canonical`, `hreflang` y `sitemap.xml`. No hay `netlify.toml` ni ningún paso de compilación.
 
 Cabeceras y CSP: `_headers`. Redirecciones: `_redirects`. La CSP de `<meta>` en cada página es solo respaldo.
 
@@ -12,7 +12,7 @@ Al publicar un artículo: copiar `blog/_template.html`, crear su pareja en `en/b
 
 ## Antes de publicar, revisar
 
-- El dominio del sitio es `https://guajilodev.netlify.app`. Si el nombre del sitio en Netlify es otro, hay que reemplazarlo en `canonical`, `hreflang`, `og:url`, `sitemap.xml`, `robots.txt`, `feed.xml`, `en/feed.xml`, `.well-known/security.txt` y este README.
+- El dominio del sitio es `https://guajilodev.pages.dev`. Si el nombre del proyecto en Cloudflare Pages es otro, hay que reemplazarlo en `canonical`, `hreflang`, `og:url`, `sitemap.xml`, `robots.txt`, `feed.xml`, `en/feed.xml`, `.well-known/security.txt` y este README.
 - Los artículos del blog están en preparación: tienen la introducción y el aviso visible, pero les falta el cuerpo. Cuando se escriban, actualizar `dateModified` y la fecha del feed.
 - Las figuras están reservadas con su `data-alt`; cuando exista el archivo, agregar el `<img>` con `width`, `height` y `alt`.
 - Los casos no publican métrica todavía: cuando exista, se agrega el bloque «Qué cambió» con el número.

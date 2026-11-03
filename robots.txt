@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://guajilodev.netlify.app/sitemap.xml
+Sitemap: https://guajilodev.pages.dev/sitemap.xml

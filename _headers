@@ -1,4 +1,4 @@
-# Fuente de verdad de las cabeceras HTTP. Netlify las aplica por ruta.
+# Fuente de verdad de las cabeceras HTTP. Cloudflare Pages las aplica por ruta.
 # La CSP se repite en <meta> solo como respaldo cuando el archivo se abre sin servidor.
 # frame-ancestors solo tiene efecto aquí: dentro de <meta> el navegador la ignora.
 #
@@ -11,7 +11,7 @@
 # connect-src 'self' en lugar de 'none': el JS no hace peticiones, pero con 'none' Lighthouse no puede
 # leer robots.txt desde la página y baja la nota de SEO. 'self' sigue bloqueando cualquier envío a terceros.
 #
-# HTML: Netlify ya responde con Cache-Control: public, max-age=0, must-revalidate.
+# HTML: Pages ya responde con Cache-Control: public, max-age=0, must-revalidate.
 
 /*
   Content-Security-Policy: default-src 'none'; base-uri 'none'; form-action 'none'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; upgrade-insecure-requests

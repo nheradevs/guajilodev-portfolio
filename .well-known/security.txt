@@ -1,6 +1,6 @@
 # Si encuentras una vulnerabilidad, escríbeme antes de publicarla y coordinamos el arreglo.
 # If you find a vulnerability, email me before publishing it and we will coordinate the fix.
-Contact: mailto:jtf2308@gmail.com
+Contact: mailto:guajilodev@gmail.com
 Expires: 2027-10-26T05:00:00.000Z
 Preferred-Languages: es, en
-Canonical: https://guajilodev.netlify.app/.well-known/security.txt
+Canonical: https://guajilodev.pages.dev/.well-known/security.txt
